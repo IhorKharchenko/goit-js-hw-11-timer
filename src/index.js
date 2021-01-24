@@ -46,8 +46,6 @@ class Countdown {
 const MyTimer = new Countdown();
 let inputValue = "";
 
-//Где-то тут должна быть адекватная валидация даты "404 not Found" :)
-
 inputRef.addEventListener(
   "input",
   debounce((event) => {
@@ -68,8 +66,8 @@ function stopCount() {
 }
 
 function startCount() {
-  if (MyTimer.active) return alert("Timer is running already!:)");
-  if (inputValue.length !== 11 || inputValue === null) return alert("wrong date format dude:)");
+  if (MyTimer.active) return alert("Timer is running already!");
+  if (inputValue.length !== 11 || inputValue === null) return alert("wrong date format");
 
   MyTimer.targetDate = new Date(inputValue);
   localStorage.setItem("time", inputValue);
